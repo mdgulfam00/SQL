@@ -1,5 +1,9 @@
 # SQL
 
+#Window Function
+### It applies on aggregates, ranking  and analytics function over a particular window. {aggregates(Sum,Avg,Count,Min,Max), Ranking(Row_Number, Rank, Dense_Rank,Percent_Rank),Analytic(LEAD,LAG,First_Value,Last_Value)}
+
+
 # Case Statement
 ### It is used to check conditions based on requirement on columns
 ```sql
