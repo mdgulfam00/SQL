@@ -21,6 +21,16 @@ max(age) over(partition by country) as 'Max',
 count(age) over(partition by country) as 'Count'
 from Customers;
 ```
+# Sysntax of Window Function on Ranking functions
+```sql
+select country,
+row_Number() over(order by country) as 'Row Number',
+rank() over(order by country) as 'Rank',
+dense_rank() over(order by country) as 'Dense rank',
+percent_rank() over(order by country) as 'Percent rank'
+from customers;
+```
+
 
 # Case Statement
 ### It is used to check conditions based on requirement on columns
