@@ -43,7 +43,8 @@ from customers;
 ```
 ### we can pass an argument to lead() and lag() function for number of lead and number of lags to be occured.
 
-``` Select country,
+```sql
+ Select country,
 lead(country,2) over (order by country) as 'Lead', --It will lead by 2 and give result which is present at 2 distance below it.
 lag(country ,2) over (order by country) as 'Lag'   --It will lag by 2 and give result which is present at 2 distance above it.
 ```
