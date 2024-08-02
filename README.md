@@ -92,3 +92,18 @@ Select first_name,country
 from my_cte
 ```
 
+# Recursive CTE()
+## Write a function to print 1 to 10
+```sql
+With Recursive my_cte as (
+      Select 1 as n       -- base query
+
+      UNION ALL
+
+      Select n+1 from my_cte  --recursive query
+      where n<10              --condition check
+)
+
+Select * from my_cte;
+```
+
