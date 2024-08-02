@@ -32,6 +32,23 @@ from customers;
 ```
 ### Rank() -> will skip the rank as many times as it duplicates where as Dense_Rank()-> will not skip anything it will rank equal items same and then give rank to next item by previous rank + 1
 
+# Syntax of Window function on Analytics Functions
+```sql
+select country,
+first_value(country) over (order by country) as 'First value',
+last_value(country) over (order by country) as 'Last value',
+lead(country) over (order by country) as 'Lead',
+lag(country) over (order by country) as 'Lag'
+from customers;
+```
+### we can pass an argument to lead() and lag() function for number of lead and number of lags to be occured.
+
+``` Select country,
+lead(country,2) over (order by country) as 'Lead', --It will lead by 2 and give result which is present at 2 distance below it.
+lag(country ,2) over (order by country) as 'Lag'   --It will lag by 2 and give result which is present at 2 distance above it.
+```
+
+
 # Case Statement
 ### It is used to check conditions based on requirement on columns
 ```sql
