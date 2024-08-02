@@ -30,7 +30,7 @@ dense_rank() over(order by country) as 'Dense rank',
 percent_rank() over(order by country) as 'Percent rank'
 from customers;
 ```
-
+### Rank() -> will skip the rank as many times as it duplicates where as Dense_Rank()-> will not skip anything it will rank equal items same and then give rank to next item by previous rank + 1
 
 # Case Statement
 ### It is used to check conditions based on requirement on columns
