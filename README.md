@@ -75,3 +75,13 @@ end as category
 from Customers;
 ```
 
+# Common Table Expression(CTE)
+#### When we write select statement it form a temporary table, It exist till query is running. So to store that table we use CTE for storing it by using WITH CLAUSE before SELECT, INSER, UPDATE, DELETE keywords
+
+## Syntax for CTE
+```sql
+WITH my_cte as (Select a,b,c from Table1)     CTE query--will create CTE with name = my_cte and create a new table with columns a,b,c 
+Select a,c from my_cte                       main query -- going to select a,c from my_cte table
+```
+
+
