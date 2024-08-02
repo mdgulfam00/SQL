@@ -83,5 +83,12 @@ from Customers;
 WITH my_cte as (Select a,b,c from Table1)     CTE query--will create CTE with name = my_cte and create a new table with columns a,b,c 
 Select a,c from my_cte                       main query -- going to select a,c from my_cte table
 ```
-
+```sql
+with my_cte as (
+  Select customer_id,first_name,age,country 
+  from Customers
+)
+Select first_name,country 
+from my_cte
+```
 
